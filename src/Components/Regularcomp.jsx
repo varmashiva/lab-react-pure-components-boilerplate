@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import { Component } from "react";
 
-class MyPureComponent extends PureComponent {
+class Myregularcomp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,7 @@ class MyPureComponent extends PureComponent {
         value: e.value + 1,
       }));
 
-      console.log('pure component');
+      console.log("regular component");
     }
   };
   handlertoggle = () => {
@@ -25,7 +25,7 @@ class MyPureComponent extends PureComponent {
   render() {
     return (
       <div>
-        <h3>{this.state.value}</h3>
+        <h2>{this.state.value}</h2>
         <button onClick={this.handlertoggle}>toggle</button>
         <button onClick={this.handleCounter}>counter</button>
       </div>
@@ -33,4 +33,4 @@ class MyPureComponent extends PureComponent {
   }
 }
 
-export default MyPureComponent;
+export default Myregularcomp;
